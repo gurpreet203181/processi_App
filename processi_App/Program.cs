@@ -20,7 +20,15 @@ namespace processi_App
             app.StartInfo.Arguments = @"C:\Users\studenti\Desktop\processi_App\processi_App\HelloWorld.txt";
             app.Start();
             app.PriorityClass = ProcessPriorityClass.RealTime;
-            app.WaitForExit() gh;
+            app.WaitForExit();
+
+            var processes = Process.GetProcesses();
+            foreach(var p in processes)
+            {  
+                if(p.ProcessName=="Notepad") p.Kill();
+            }
+            Console.WriteLine("Programma terminato");
+            Console.ReadLine();
         }
     }
 }
