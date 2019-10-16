@@ -20,7 +20,7 @@ namespace processi_App
             app.StartInfo.Arguments = @"C:\Users\studenti\Desktop\processi_App\processi_App\HelloWorld.txt";
             app.Start();
             app.PriorityClass = ProcessPriorityClass.RealTime;
-            app.WaitForExit();
+            app.WaitForExit() gh;
         }
     }
 }
